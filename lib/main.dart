@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import '../config/theme.dart';
+import '../screens/home_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const PDFToolApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class PDFToolApp extends StatelessWidget {
+  const PDFToolApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'PDF ToolKit',
+      theme: AppTheme.lightTheme,
+      home: const HomeScreen(),
     );
   }
 }
